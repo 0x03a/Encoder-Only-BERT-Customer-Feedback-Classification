@@ -22,7 +22,7 @@ st.markdown("---")
 @st.cache_resource
 def load_model():
     try:
-        model_path = '/home/inshal/Downloads/sentiment/Encoder-Only-BERT-Customer-Feedback-Classification/bert_sentiment_model'
+        model_path = 'bert_sentiment_model'
         tokenizer = BertTokenizerFast.from_pretrained(model_path)
         model = BertForSequenceClassification.from_pretrained(model_path)
         device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
